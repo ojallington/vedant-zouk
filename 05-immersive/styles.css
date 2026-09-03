@@ -727,3 +727,12 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   .hero__cta { display: flex; flex-wrap: wrap; }
   .hero__cta .btn { width: auto; }
 }
+
+/* Keyboard skip link — matches the other variations. */
+.skip {
+  position: absolute; left: 1rem; top: -100px; z-index: 200;
+  background: var(--gold, #d4af6e); color: var(--ink, #120a14);
+  padding: .6rem .9rem; border-radius: 8px; font: 500 .9rem/1 inherit;
+  text-decoration: none;
+}
+.skip:focus { top: 1rem; }
