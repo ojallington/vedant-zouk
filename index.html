@@ -146,6 +146,23 @@
     *{animation:none !important; transition:none !important}
     .card:hover{transform:none}
   }
+
+  .howto p{margin:.85rem 0 0}
+  .howto p:first-of-type{margin-top:.6rem}
+  .notes h3.spaced{margin-top:clamp(2.5rem,7vw,3.5rem)}
+  .note-lede{margin:0 0 1.1rem; color:var(--ink-dim); font-size:.95rem; line-height:1.65}
+  ol.qa{margin:0; padding:0; list-style:none; counter-reset:qa; display:grid; gap:1rem}
+  ol.qa li{
+    counter-increment:qa; position:relative; padding-left:2.2rem;
+    color:var(--ink-dim); font-size:.95rem; line-height:1.65;
+  }
+  ol.qa li::before{
+    /* .notes li::before paints a 6x1px dash; reset it before drawing the numeral */
+    content:counter(qa,decimal-leading-zero); position:absolute; left:0; top:.05em;
+    width:auto; height:auto; background:none;
+    font-family:"Cormorant Garamond",Georgia,serif; font-size:1.05rem; color:var(--gold);
+  }
+  ol.qa b{color:var(--ink); font-weight:500}
 </style>
 </head>
 <body>
@@ -163,9 +180,15 @@
 <main class="wrap">
 
   <div class="howto">
-    <b>Best opened on your phone.</b> Every version is finished and working — you can walk all the way
-    through booking a class in each one, including paying by card or cash. Nothing takes real money yet.
-    Pick the look you like and we'll take that one forward.
+    <b>Read this bit first — it takes a minute.</b>
+    <p>Rather than guess at one design and get it wrong, I built five. They are not sketches: every
+      one is a finished, working website. Same words, same prices, same booking — five different
+      looks. You are choosing a <b>feel</b>, not a feature list.</p>
+    <p>In each one you can go the whole way through booking a class, choose card or cash, and see the
+      confirmation. <b>Nothing takes real money.</b> Card payment is built and deliberately switched
+      off until you say go.</p>
+    <p>Everything you see is easy to change afterwards — prices, times, words, photos. What is hard to
+      change later is the overall look, so that is the one thing worth your attention today.</p>
   </div>
 
   <div class="designs">
@@ -223,21 +246,55 @@
   </div>
 
   <section class="notes">
-    <h3>Before you look — a few things to check</h3>
+    <h3>What I had to guess</h3>
     <ul>
-      <li><b>The prices are guesses.</b> €12 trial, €18 single class, €30 for both levels, €65 for a
-        four-week course, €95 for both levels over four weeks. They sit just under what Zoukseed
-        charges on Wednesdays. Tell me the real numbers and they change everywhere at once.</li>
-      <li><b>Card payment is built and switched off.</b> Stripe is wired in and ready — it just needs
-        your account connected. Cash at the door works as a full option, not an afterthought, because
-        that's how the class actually runs.</li>
-      <li><b>Levels 1 and 3, Thursdays</b> at Tanzstudio Rebecca, White Room. 20:00 and 21:00.
-        Correct me if the times are off.</li>
-      <li><b>Still needed from you:</b> an email address for bookings, a couple of sentences about
-        you and Miriam, and whether you want it in English, German, or both.</li>
-      <li><b>Logins are the honest version for now.</b> Each person's bookings are remembered on
-        their own phone. Real accounts that follow you between devices need a small backend — easy to
-        add later, and it won't change the design you pick.</li>
+      <li><b>The prices are invented.</b> €12 trial, €18 a single class, €30 for both levels in one
+        night, €65 for a four-week course, €95 for both levels across four weeks. I put them just
+        under Zoukseed on Wednesdays and made them far simpler to compare — their pricing page hides
+        five overlapping options behind a dropdown, which is an easy thing to beat. These are a
+        starting point to react to, not a recommendation.</li>
+      <li><b>Levels 1 and 3, Thursdays</b> at Tanzstudio Rebecca, White Room, 20:00 and 21:00. Taken
+        from the schedule graphic — say if anything has moved.</li>
+      <li><b>The bit about you and Miriam is placeholder text</b> that I wrote. Replace it with your
+        own words.</li>
+      <li><b>Student logins work per-device for now.</b> Someone's bookings are remembered on their
+        own phone. Accounts that follow a person between devices need a small piece of backend —
+        straightforward to add later, and it will not change whichever design you pick.</li>
+    </ul>
+
+    <h3 class="spaced">What I need back from you</h3>
+    <p class="note-lede">You do not have to answer all of it. Numbers one and two unblock everything
+      else — the rest can follow.</p>
+    <ol class="qa">
+      <li><b>Which one?</b> Just the number. If you want the look of one and the pricing layout of
+        another, say that — mixing is fine and normal.</li>
+      <li><b>The five prices.</b> Correct them, or tell me the structure is wrong. Related: is this a
+        fixed four-week course people commit to, or can they drop in any Thursday? It changes what
+        the whole page leads with.</li>
+      <li><b>An email address</b> for bookings to arrive at.</li>
+      <li><b>Two or three sentences</b> about you and Miriam — how you started, what you love about
+        Zouk. Voice note is fine, I will write it up.</li>
+      <li><b>English, German, or both?</b> Munich dancers will expect German; the poster is English.</li>
+      <li><b>Do you want card payments on?</b> If yes I need a Stripe account connected. Cash at the
+        door keeps working either way.</li>
+      <li><b>Booking as a couple.</b> Right now people can name a partner and say whether they lead or
+        follow. Useful, or noise?</li>
+      <li><b>Do you own a domain?</b> If not I can suggest a few.</li>
+    </ol>
+
+    <h3 class="spaced">How to give feedback so it actually lands</h3>
+    <ul>
+      <li><b>Screenshot and scribble on it.</b> One picture with an arrow beats a paragraph. Your
+        phone will do it.</li>
+      <li><b>Tell me the feeling, not the fix.</b> "This feels too cold for a dance class" is far more
+        useful than "make the buttons blue" — the second one closes off better answers.</li>
+      <li><b>Say what you liked too.</b> If I only hear the problems, I will change something that was
+        already working.</li>
+      <li><b>Show it to two or three dancers</b> before you reply, ideally someone who has never done
+        Zouk. Ask them one question: <i>could you book a class?</i> Watch where they hesitate. That is
+        worth more than any opinion either of us has.</li>
+      <li><b>Do not worry about being harsh.</b> Throwing one of these away costs nothing — that is
+        exactly why there are five.</li>
     </ul>
   </section>
 
