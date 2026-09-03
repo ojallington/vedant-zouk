@@ -23,8 +23,9 @@ verify() {
   bold "Checking the live pages…"
   local all_ok=1
   for p in "" "${PAGES[@]}"; do
-    local url="$BASE/$p" code
-    code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 "$url" || echo 000)
+    # directory URLs need the trailing slash, or Pages 301s to the canonical form
+    local url="$BASE/${p:+$p/}" code
+    code=$(curl -sL -o /dev/null -w '%{http_code}' --max-time 15 "$url" || echo 000)
     if [ "$code" = 200 ]; then printf '  \033[32m%s\033[0m  %s\n' "$code" "$url"
     else                       printf '  \033[31m%s\033[0m  %s\n' "$code" "$url"; all_ok=0; fi
   done
