@@ -131,3 +131,14 @@ docs/                     brief, transcripts, build spec, original voice notes
 api-stub/                 the serverless function needed for Stripe Checkout mode
 tools/shot.js             headless screenshot + console-error checker
 ```
+
+---
+
+## Before this goes live for real
+
+- **Remove the `noindex`.** Every page carries `<meta name="robots" content="noindex, nofollow">`
+  while it is a draft with placeholder prices on a personal URL. Delete that line from the chosen
+  design (and drop the other four) when it moves to a real domain.
+- **Impressum and Datenschutz are required** for a commercial site in Germany. They are currently
+  placeholder links.
+- Replace the placeholder email and teacher bio in `shared/site-config.js`.
