@@ -41,3 +41,29 @@ Otherwise verbatim.
 > Thursday, one and three is done by us. And then what does one and three mean?
 >
 > So this was the overall, like say, format we need. And I can also provide more information. Just wait.
+
+## Voice note 4 — 2026-09-04 14:28 (1m54s)
+`docs/voicenote-4-1428.ogg` — after seeing the five designs.
+
+> Hello, bro. So, first of all, thank you so much for the website. I showed the website to my dance
+> partner, and she was also super impressed. But she has, how do you say, fear that if you make it so
+> professional — because it looks so professional — then there's a high chance that maybe the German
+> government will track us. And then get to know the taxes and all this stuff.
+>
+> So, for now, I was just thinking, okay, because we're just starting now, so we don't have any
+> revenue system, we don't know how much we will make. So to keep it low, we keep the website — maybe
+> you can tell me how I can host it, blah blah blah, then I will host it — and we only remove the
+> money part from it. So not mentioning the money stuff here.
+>
+> So maybe we can add a Google form… or not the Google form, just our Instagram profile. And in the
+> Instagram profile we can add the Google form. So then it's like, you know, hidden. No one knows
+> what's going on. So that was the goal we are thinking, to stay safe and low.
+>
+> So let me know, how is it possible? Or can we make it more like, you know, not a booking for now,
+> but more like just explaining our course, which is already there. And we just keep it that much and
+> remove the money, like how much we are charging, information from it. That's it. So what do you
+> think? Is it possible?
+
+**Response in progress:** researching the actual German rules (see `docs/germany-setup-report.md`).
+Short version: the fear is misdirected — liability follows income, not published prices. But a
+prices-off "soft launch" build is technically trivial if they still want it after reading.

@@ -372,10 +372,15 @@
           </div>
           <p class="fs__note" id="summary-discount"></p>
 
-          <div class="pay">
+          <!-- § 312j Abs. 3 BGB (Button-Loesung): this button concludes a paid contract, so its
+               label must unambiguously state the payment obligation. "Buy now" corresponds to
+               "kaufen", which is accepted. If this page is translated, it MUST read
+               "zahlungspflichtig bestellen". Wrong label = no contract and no claim to payment
+               (§ 312j Abs. 4). Confirm final wording with a Rechtsanwalt. -->
+                    <div class="pay">
             <button class="pay__btn" type="button" id="pay-card">
               <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.5 10h19" stroke="currentColor" stroke-width="1.5"/><path d="M6 14.5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <strong>Pay by card</strong>
+              <strong>Buy now</strong>
               <span id="pay-card-note">Secure checkout with Stripe</span>
             </button>
             <button class="pay__btn" type="button" id="pay-cash">

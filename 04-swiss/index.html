@@ -312,9 +312,14 @@
       <section class="step" data-step="3" aria-labelledby="s3-title" hidden>
         <h3 id="s3-title" class="step__title">How would you like to pay?</h3>
         <div class="summary" id="summary" aria-live="polite"></div>
-        <div class="pay">
+        <!-- § 312j Abs. 3 BGB (Button-Loesung): this button concludes a paid contract, so its
+             label must unambiguously state the payment obligation. "Buy now" corresponds to
+             "kaufen", which is accepted. If this page is translated, it MUST read
+             "zahlungspflichtig bestellen". Wrong label = no contract and no claim to payment
+             (§ 312j Abs. 4). Confirm final wording with a Rechtsanwalt. -->
+                <div class="pay">
           <button class="pay__opt" type="button" id="pay-card">
-            <span class="pay__label">Pay by card</span>
+            <span class="pay__label">Buy now</span>
             <span class="pay__desc" id="pay-card-desc">Secure checkout with Stripe. Your place is confirmed immediately.</span>
             <span class="pay__go">Continue to Stripe →</span>
           </button>

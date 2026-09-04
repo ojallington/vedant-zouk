@@ -368,9 +368,14 @@
         <section class="bk-step" data-panel="3" aria-labelledby="bk-s3" hidden>
           <h3 class="bk-h" id="bk-s3">How would you like to pay?</h3>
           <dl class="summary" id="summary"></dl>
-          <div class="pay">
+          <!-- § 312j Abs. 3 BGB (Button-Loesung): this button concludes a paid contract, so its
+               label must unambiguously state the payment obligation. "Buy now" corresponds to
+               "kaufen", which is accepted. If this page is translated, it MUST read
+               "zahlungspflichtig bestellen". Wrong label = no contract and no claim to payment
+               (§ 312j Abs. 4). Confirm final wording with a Rechtsanwalt. -->
+                    <div class="pay">
             <button type="button" class="pay-card" id="pay-card">
-              <span class="label">Pay by card</span>
+              <span class="label">Buy now</span>
               <span class="pay-title">Card, now</span>
               <span class="pay-text" id="pay-card-text">Secure checkout with Stripe. Your place is confirmed the moment payment goes through.</span>
               <span class="pay-go">Continue to Stripe
